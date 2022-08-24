@@ -1,10 +1,10 @@
 body{
-  background-color: #395B64;
+  background-color: #83898b;
 }
 
 .App {
   text-align: center;
-  background-color: #E7F6F2;
+  background-color: #dee1e1;
 }
 
 .App .menu{
@@ -15,3 +15,6 @@ body{
   padding-bottom: 0.5%;
 }
 
+.ItemListContainer .MuiTypography-h1{
+  color: blue;
+}

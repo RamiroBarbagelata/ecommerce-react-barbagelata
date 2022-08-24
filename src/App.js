@@ -1,29 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './componets/NavBar';
+import ItemListContainer from './componets/ItemListContainer';
+import RunPhoto from './assets/RunPhoto.png';
+import { ThemeProvider } from '@mui/material';
+import theme from './MuiTheme';
+
 
 
 function App() {
-
-
-
+  const greeting = 'Bienvenido a Nike Running Shoes';
   return (
-    
-    <div className="App">
-      <NavBar />
-      <div>
-        <h1>Bienvenido a Nike Running Shoes</h1>
-        <p>Todo lo que buscas en un solo lugar</p>
-        <h4>Explorar</h4>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <NavBar />
+        <ItemListContainer greeting={greeting}/>
+        <div>
+          <img src={RunPhoto} alt="" />
+        </div>
       </div>
-      
-      {/* <div className='menu'>
-        <li>Home</li>
-        <li>Categorias</li>
-        <li>Ofertas</li>
-        <li>Contacto</li>
-      </div> */}
-    </div>
+    </ThemeProvider>
     
   );
 }
