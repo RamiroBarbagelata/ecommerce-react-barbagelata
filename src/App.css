@@ -18,3 +18,14 @@ body{
 .ItemListContainer .MuiTypography-h1{
   color: blue;
 }
+
+.buttons button {
+  color: black;
+  background-color: white;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+.buttons span {
+  font-size: 25px;
+}
