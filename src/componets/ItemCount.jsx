@@ -8,10 +8,12 @@ import Stack from '@mui/material/Stack';
 
 
 
+
 const Counter = ({ stock, initial, onAdd }) => {
     const [counter, setCounter] = useState(initial);
 
     return (
+        <>
         <Card sx={{ maxWidth: 345 }} style={{borderRadius: 10}}>
             <CardActionArea>
                 <CardMedia
@@ -54,6 +56,8 @@ const Counter = ({ stock, initial, onAdd }) => {
             }}> Comprar ahora </Button>
 
         </Card>
+        </>
+        
     );
 }
 
