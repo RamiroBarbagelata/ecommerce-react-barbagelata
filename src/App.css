@@ -1,5 +1,5 @@
 body{
-  background-color: #83898b;
+  background-color: #ffffff;
 }
 
 .App {
@@ -13,6 +13,17 @@ body{
   justify-content: space-around;
   list-style: none;
   padding-bottom: 0.5%;
+}
+
+.categories{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.itemMenu{
+  margin-left: 3rem;
 }
 
 .ItemListContainer .MuiTypography-h1{
@@ -51,15 +62,16 @@ body{
   box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
 
-.ItemDetail{
+.ItemDetail {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center; 
-  padding: 4rem;
+  padding: 2rem;
   background-color: white;
-  width: 93vw;
-  height: 100vh;
+  width: 100vw;
+  height: 70vh;
+  bottom: 10rem;
 }
 
 .ItemDetail .detail{
@@ -68,6 +80,7 @@ body{
   flex-direction: column;
   text-align: left; 
   padding: 3rem;
+  margin-right: 9rem;
 
 }
 
@@ -77,19 +90,21 @@ body{
 
 .counter{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  margin-top: 4rem;
+  
 
 }
 
 .counter .buyNow{
   margin-bottom: 1.5rem;
+  color: black;
 }
 
 .counter .btnCounter{
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .counter .countNumber{

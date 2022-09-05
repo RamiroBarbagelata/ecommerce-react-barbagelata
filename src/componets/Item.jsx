@@ -7,12 +7,13 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import { Category } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Item = ({product}) => {
-    const {title, price, pictureUrl, category } = product;
-
+    const {id, title, price, pictureUrl, category } = product;
+    const navigate = useNavigate()
     return (
         <>
         <div className='singleCard'>
@@ -37,8 +38,7 @@ const Item = ({product}) => {
                     <Button size="large" color='success' variant='text' style={{marginLeft:20}} >${price}</Button>
                     </Stack>
                     
-                <Button size="medium" variant="outlined" href="#outlined-buttons" style={{ margin: 20 }} onClick={() => {
-            }}> Ver Más </Button>
+                <Button size="medium" variant="outlined" style={{ margin: 20 }} onClick={()  => navigate (`/detail/${id}`)}> Ver Más </Button>
             </Card>
             
         </div>

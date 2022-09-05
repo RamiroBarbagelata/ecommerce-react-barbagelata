@@ -1,11 +1,10 @@
 import './App.css';
 import NavBar from './componets/NavBar';
 import ItemListContainer from './componets/ItemListContainer';
-import RunPhoto from './assets/RunPhoto.png';
 import { ThemeProvider } from '@mui/material';
 import theme from './MuiTheme';
 import ItemDetailContainer from './componets/ItemDetailContainer';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -13,17 +12,17 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <NavBar />
-        <ItemListContainer greeting={greeting}/>
-        <div>
-          {/* <img src={RunPhoto} alt="" /> */}
+      <BrowserRouter>
+        <div className="App">
+          <NavBar/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting={greeting}/>}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer greeting={greeting}/>}/>
+            <Route path='/detail/:id' element={<ItemDetailContainer/>}/> 
+          </Routes> 
         </div>
-        <ItemDetailContainer/>
-      </div>
+      </BrowserRouter>
     </ThemeProvider>
-    
-    
   );
 }
 

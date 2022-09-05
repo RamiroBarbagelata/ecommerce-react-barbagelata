@@ -7,18 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Cart from './CartWidget';
 import logoNike from '../assets/LogoNike.png'
+import { NavLink } from 'react-router-dom';
 
 
-const pages = ['Men', 'Women', 'All'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+const pages = [{link: '/category/running', name: 'RUNNING'},{link: '/category/lifestyle', name: 'LIFESTYLE'}, {link: '/category/jordan', name: 'JORDAN'}, {link: '/category/nikesb', name: 'NIKE SB'}];
 
 export default function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,30 +38,25 @@ export default function NavBar() {
     };
 
     return (
-        <AppBar position="static" color='default'>
+        <AppBar position="sticky" color='default'>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <div className='nikeLogo'>
-                        <img src={logoNike} style={{ width: '3rem' }} alt="" />
-                    </div>
-                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-                    <Typography
+                    <NavLink to="/" className= 'categories'>
+                    <Typography className='itemMenu'
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
-                            fontWeight: 700,
+                            fontWeight: 900,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
                     >
-                        {/* NIKE */}
                     </Typography>
+                    </NavLink>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -93,18 +86,20 @@ export default function NavBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                            {pages.map((page, index) => (
+                                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                                    <NavLink className='categories' to={page.link}>{page.name}</NavLink>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    <div className='nikeLogo'>
+                    <NavLink to='/'>
+                    <div className='nikeLogoMobile'>
                         <img src={logoNike} style={{ width: '3rem' }} alt="" />
                     </div>
-                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                    <Typography
+                    </NavLink>
+
+                    <Typography 
                         variant="h5"
                         noWrap
                         component="a"
@@ -120,17 +115,12 @@ export default function NavBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        {/* NIKE */}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                        {pages.map((page, index) => (
+                            <MenuItem key={index} onClick={handleCloseNavMenu}>
+                                <NavLink className='categories' to={page.link}>{page.name}</NavLink>
+                            </MenuItem>
                         ))}
                     </Box>
                     <Cart cant={7} />

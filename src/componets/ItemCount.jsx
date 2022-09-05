@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActions } from '@mui/material';
 import Stack from '@mui/material/Stack';
 
 
@@ -16,7 +13,7 @@ const Counter = ({ stock, initial, onAdd }) => {
         <>
             <Card className="counter" sx={{ maxWidth: 345 }} style={{ borderRadius: 10 }}>
                 <CardActions>
-                    <Stack className="btnCounter" direction="row" spacing={5}>
+                    <Stack className="btnCounter" direction="row" spacing={2}>
 
                         <Button variant="outlined" size="small" onClick={() => {
                             counter > initial ? setCounter(counter - 1) : alert('Por lo menos selecciona un producto')
