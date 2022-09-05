@@ -1,8 +1,14 @@
-export const customFetch = (products) => {
+import elements from '../Mocks/products.json'
 
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res(products)
-        }, 2000)
-    })
-}
+export const customFetch = new Promise((res, rej) => {
+    let condition = true;
+
+    setTimeout(() => {
+        if (condition) {
+            res(elements)
+        } else {
+            rej('no')
+        }
+    }, 2000)
+
+})

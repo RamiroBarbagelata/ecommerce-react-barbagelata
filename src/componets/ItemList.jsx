@@ -2,15 +2,15 @@ import React from 'react'
 import Item from './Item'
 
 
-const ItemList = ({listProducts}) => {
+const ItemList = ({ listProducts }) => {
     return (
-        <> 
-            {listProducts.map((product) => <Item 
-            key={product.id} 
-            product={product}/>)}
-            {/* <div>ItemList</div> */}
+        <>
+            <div className='cardShoes'>
+                {listProducts.map((product) => <Item
+                    key={product.id}
+                    product={product} />)}
+            </div>
         </>
-
     );
 };
 

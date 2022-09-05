@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Cart from './CartWidget';
+import logoNike from '../assets/LogoNike.png'
 
 
 const pages = ['Men', 'Women', 'All'];
@@ -43,7 +43,10 @@ export default function NavBar() {
         <AppBar position="static" color='default'>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <div className='nikeLogo'>
+                        <img src={logoNike} style={{ width: '3rem' }} alt="" />
+                    </div>
+                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -59,7 +62,7 @@ export default function NavBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        NIKE
+                        {/* NIKE */}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -97,7 +100,10 @@ export default function NavBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <div className='nikeLogo'>
+                        <img src={logoNike} style={{ width: '3rem' }} alt="" />
+                    </div>
+                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
                     <Typography
                         variant="h5"
                         noWrap
@@ -114,7 +120,7 @@ export default function NavBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        NIKE
+                        {/* NIKE */}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
@@ -127,7 +133,7 @@ export default function NavBar() {
                             </Button>
                         ))}
                     </Box>
-                    <Cart cant={7}/>
+                    <Cart cant={7} />
                 </Toolbar>
             </Container>
         </AppBar>

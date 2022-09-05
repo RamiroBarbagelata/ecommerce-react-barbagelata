@@ -1,0 +1,137 @@
+[
+    {
+        "id": 100,
+        "title": "Nike React Infinity Run", 
+        "description": "Aún nuestro calzado más probado, hecho para ayudarte a lograr tus ambiciosos objetivos de running. El Nike React Infinity Run 3 se siente cómodo y estable con una pisada suave que te lleva por rutas largas y cortas.",
+        "price": 25500,
+        "pictureUrl": "https://i.postimg.cc/wMbkZgkV/shoes-Nike01.png",
+        "category": "running",
+        "stock": 7 
+    },
+    {
+        "id": 101,
+        "title": "Nike Air Zoom Pegasus", 
+        "description": "Diseñada para quienes quieren salir y reconectarse con la naturaleza, esta versión inspirada en el aire libre del Nike Air Zoom Pegasus 39 infunde tus carreras con energía para los días soleados. La tecnología Flywire ayuda a que los pies se sientan contenidos, mientras que la espuma Nike React Foam suave y con respuesta inmediata se combina con unidades Zoom Air en el talón y el antepié para brindar mayor rebote a tu pisada.",
+        "price": 27500,
+        "pictureUrl": "https://i.postimg.cc/2yZKQ0vT/shoes-Nike02.png",
+        "category": "running",
+        "stock": 5
+    },
+    {
+        "id": 102,
+        "title": "Air Jordan 1 Low", 
+        "description": "Inspirado en el original que se lanzó en 1985, el Air Jordan 1 Low ofrece un estilo clásico impecable que se resulta familiar, pero renovado. Con un diseño icónico que combina perfectamente con cualquier ajuste, este calzado garantiza que siempre estará a la moda.",
+        "price": 29000,
+        "pictureUrl": "https://i.postimg.cc/tCKbYCYQ/shoes-Nike04.png",
+        "category": "jordan",
+        "stock": 3 
+    },
+    {
+        "id": 103,
+        "title": "Nike Free Run 5.0", 
+        "description": "Confeccionada con al menos un 20% de material reciclado por peso, la bota de este Nike Free, cómoda como un calcetín, está diseñada para pasar de la carrera a tu rutina diaria. La parte superior está hecha de tejido Knit transpirable y combina la flexibilidad que te encanta con un diseño seguro que te mantendrá cerca del suelo dando la sensación de una pisada descalza.",
+        "price": 24500,
+        "pictureUrl": "https://i.postimg.cc/hPLYh7pW/shoes-Nike03.png",
+        "category": "running",
+        "stock": 3
+    },
+    {
+        "id": 104,
+        "title": "Nike Blazer Low '77", 
+        "description": "Esta superestrella de la moda urbana se actualiza con detalles extragrandes. El calzado Nike Blazer Low ' 77 Jumbo, que toma el look clásico que más te gusta, cuenta con un diseño de Swoosh extragrande, agujetas extraanchas y costuras más gruesas.",
+        "price": 27500,
+        "pictureUrl": "https://i.postimg.cc/qqfR0XfS/shoes-Nike05.png",
+        "category": "lifestyle",
+        "stock": 4 
+    },
+    {
+        "id": 105,
+        "title": "Air Jordan 1 Mid", 
+        "description": "Inspirado en el AJ1 original, el Air Jordan 1 Mid ofrece a los fanáticos la oportunidad de seguir los pasos de MJ. El color flamante bordea los materiales clásicos e impecables y aporta un toque de modernidad a un diseño clásico.",
+        "price": 31500,
+        "pictureUrl": "https://i.postimg.cc/nLHqfxKB/shoes-Nike06.png",
+        "category": "jordan",
+        "stock": 2 
+    },
+    {
+        "id": 106,
+        "title": "Nike ZoomX Invincible", 
+        "description": "El Nike ZoomX Invincible Run Flyknit 2 te mantiene en marcha con la misma sensación súper suave que te permite sentir el potencial cuando tu pie toca el pavimento.",
+        "price": 26500,
+        "pictureUrl": "https://i.postimg.cc/jSqyGK4N/shoes-Nike07.png",
+        "category": "running",
+        "stock": 3 
+    },
+    {
+        "id": 107,
+        "title": "Nike Air Max 1", 
+        "description": "Conoce al líder de la manada. Lanzado por primera vez en 1987, el Nike Air Max 1 fue el primer calzado de la familia en presentar Air al mundo. Con un look trepidante, una amortiguación demostrada y una clásica protección antilodo ondulada, no es de extrañar que haya reinado con tanta supremacia desde ese entonces.",
+        "price": 25000,
+        "pictureUrl": "https://i.postimg.cc/8PTSQnJM/shoes-Nike09.png",
+        "category": "lifestyle",
+        "stock": 4 
+    },
+    {
+        "id": 108,
+        "title": "Nike React Pegasus", 
+        "description": "Correr es tu ritual diario. Te lleva de la carretera al sendero en busca de nuevas aventuras y metas. Deja que el calzado Nike Pegasus Trail 4 te lleve hasta ahí y de regreso con una sensación de soporte y elasticidad. La tracción en la planta del pie te permite recorrer un terreno rocoso, y te proporciona a su vez una pisada suave para la carretera.",
+        "price": 19500,
+        "pictureUrl": "https://i.postimg.cc/Kz7H0x5V/shoes-Nike10.png",
+        "category": "running",
+        "stock": 5 
+    },
+    {
+        "id": 109,
+        "title": "Air Jordan 1 Mid SE", 
+        "description": "Llévate todos los aplausos con un J de cuero en un audaz mosaico de colores. La amortiguación Air clásica y el cómodo cuello de perfil medio mantienen tus pies felices. Equípate y prepárate para los elogios.",
+        "price": 19500,
+        "pictureUrl": "https://i.postimg.cc/NfZk2Z6r/shoes-Nike11.png",
+        "category": "jordan",
+        "stock": 2 
+    },
+    {
+        "id": 110,
+        "title": "Nike Air Force 1 '07", 
+        "description": "El fulgor vive en Nike Air Force 1 ’07, el ícono del básquetbol que le da un toque fresco a las características más recordadas: cuero reluciente, combinaciones de colores impecables y la cantidad perfecta de destellos para que brilles. Este acabado blanco puro e impecable agrega el contraste de la suela de goma para brindar un look fresco y versátil con la cantidad exacta de destello.",
+        "price": 22500,
+        "pictureUrl": "https://i.postimg.cc/tC6rXFwb/shoes-Nike12.png",
+        "category": "lifestyle",
+        "stock": 4 
+    },
+    {
+        "id": 111,
+        "title": "Nike ZoomX Vaporfly", 
+        "description": "Sigue evolucionando en velocidad con un calzado de carrera hecho para ayudarte a alcanzar nuevos objetivos y récords.Mejora la comodidad y la transpirabilidad con una parte superior rediseñada.Ya sea en una carrera de 10 km o en un maratón, este modelo, al igual que su versión anterior, mantiene la amortiguación de respuesta inmediata y el soporte seguro para que alcances tu mejor marca personal.",
+        "price": 29500,
+        "pictureUrl": "https://i.postimg.cc/zBRhnFnX/shoes-Nike13.png",
+        "category": "running",
+        "stock": 5 
+    },
+    {
+        "id": 112,
+        "title": "Nike ZoomX Zegama", 
+        "description": "CPonte el Nike ZoomX Zegama para aventurarte por las subidas y bajadas de terrenos poco seguros. Desarrollado con gran agarre y una estabilidad mejorada, te brinda cobertura para que puedas seguir escalando y alcanzar una mayor altura personal cuando el juego se pone difícil. Ya sea que se trate de un paisaje cuesta arriba rocoso y desafiante o de una bajada empinada y resbaladiza por un sendero traicionero, siéntete segura cuando decides salir a la carretera.",
+        "price": 24500,
+        "pictureUrl": "https://i.postimg.cc/m2ZD4Stz/shoes-Nike14.png",
+        "category": "running",
+        "stock": 5 
+    },
+    {
+        "id": 113,
+        "title": "Air Jordan 1 Zoom", 
+        "description": "Un estilo icónico ahora más cómodo. El Air Jordan 1 Zoom Air Cmft toma el primer Air Jordan y lo rediseña con una amortiguación ligera y de bajo perfil y elementos que mejoran la sensación durante el uso. El cuero y las telas en la parte superior ofrecen una sensación cómoda inmediata. El cuello forrado y acolchado cubre el talón para brindarte un ajuste seguro.",
+        "price": 29500,
+        "pictureUrl": "https://i.postimg.cc/PxGzJ577/shoes-Nike15.png",
+        "category": "jordan",
+        "stock": 7 
+    },
+    {
+        "id": 114,
+        "title": "Nike SB Force 58", 
+        "description": "El Nike SB Force 58, la mayor y más reciente innovación que llega a las calles, aporta la durabilidad de la suela cupsole y la flexibilidad del calzado vulcanizado. Está confeccionado con lona y gamuza, y luce un acabado con perforaciones: todo el look irradia el ADN del básquetbol de herencia.",
+        "price": 27500,
+        "pictureUrl": "https://i.postimg.cc/3x4vGH2Q/shoes-Nike16.png",
+        "category": "nike SB",
+        "stock": 3 
+    }
+]

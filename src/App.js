@@ -4,20 +4,12 @@ import ItemListContainer from './componets/ItemListContainer';
 import RunPhoto from './assets/RunPhoto.png';
 import { ThemeProvider } from '@mui/material';
 import theme from './MuiTheme';
-import Counter from './componets/ItemCount'
-
-
+import ItemDetailContainer from './componets/ItemDetailContainer';
 
 
 
 function App() {
   const greeting = 'Bienvenido a Nike Running Shoes';
-
-  const stock = 7;
-  const initial = 1;
-  let totalShop = 0;
-  const onAdd = (quantity) => totalShop === quantity;
-  
 
   return (
     <ThemeProvider theme={theme}>
@@ -27,7 +19,7 @@ function App() {
         <div>
           {/* <img src={RunPhoto} alt="" /> */}
         </div>
-        <Counter stock={stock} initial={initial} onAdd={onAdd}/>
+        <ItemDetailContainer/>
       </div>
     </ThemeProvider>
     

@@ -14,50 +14,33 @@ const Counter = ({ stock, initial, onAdd }) => {
 
     return (
         <>
-        <Card sx={{ maxWidth: 345 }} style={{borderRadius: 10}}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="300"
-                    image="https://i.postimg.cc/B635TYDq/nike-Shoe01.png"
-                    alt="Nike Free"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Nike Free RN Flyknit 2018
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Diseñado para carreras cortas cuando quieres una sensación de estar descalzo,
-                        el Nike Free RN Flyknit 2018 se siente muy ligero y flexible.
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Stack direction="row" spacing={8}>
+            <Card className="counter" sx={{ maxWidth: 345 }} style={{ borderRadius: 10 }}>
+                <CardActions>
+                    <Stack className="btnCounter" direction="row" spacing={5}>
 
-                    <Button variant="outlined" onClick={() => {
-                        counter > initial ? setCounter(counter - 1) : alert('Por lo menos selecciona un producto')
-                    }}> - </Button>
+                        <Button variant="outlined" size="small" onClick={() => {
+                            counter > initial ? setCounter(counter - 1) : alert('Por lo menos selecciona un producto')
+                        }}> - </Button>
 
-                    <Button size="large" color="secondary">
-                        {counter}
-                    </Button>
+                        <Button className="countNumber" size="large" color="secondary">
+                            {counter}
+                        </Button>
 
-                    <Button variant="outlined" onClick={() => {
-                        counter < stock ? setCounter(counter + 1) : alert('No hay stock suficiente')
-                    }}> + </Button>
+                        <Button variant="outlined" onClick={() => {
+                            counter < stock ? setCounter(counter + 1) : alert('No hay stock suficiente')
+                        }}> + </Button>
 
-                </Stack>
-            </CardActions>
+                    </Stack>
+                </CardActions>
 
-            <Button size="large" variant="outlined" href="#outlined-buttons" style={{ margin: 20 }} onClick={() => {
-                onAdd(counter);
-                setCounter(initial);
-            }}> Comprar ahora </Button>
+                <Button className="buyNow" size="large" variant="outlined" href="#outlined-buttons" onClick={() => {
+                    onAdd(counter);
+                    setCounter(initial);
+                }}> Comprar ahora </Button>
 
-        </Card>
+            </Card>
         </>
-        
+
     );
 }
 
