@@ -5,6 +5,7 @@ import { ThemeProvider } from '@mui/material';
 import theme from './MuiTheme';
 import ItemDetailContainer from './componets/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './componets/Cart';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/' element={<ItemListContainer greeting={greeting}/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer greeting={greeting}/>}/>
             <Route path='/detail/:id' element={<ItemDetailContainer/>}/> 
+            <Route path='/cart' element={<Cart/>}/>
           </Routes> 
         </div>
       </BrowserRouter>

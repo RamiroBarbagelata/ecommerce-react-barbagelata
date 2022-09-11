@@ -1,13 +1,24 @@
-import React, { useState } from "react";
 import Card from '@mui/material/Card';
 import { Button, CardActions } from '@mui/material';
 import Stack from '@mui/material/Stack';
 
 
+const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
+    
+    const addQuantity = () => {
+        if (count > initial) {
+            setCount(count - 1) 
+        }
+    }
+    
+
+    const subtractQuantity = () => {
+        if (count < stock) {
+            setCount(count + 1) 
+        } 
+    }
 
 
-const Counter = ({ stock, initial, onAdd }) => {
-    const [counter, setCounter] = useState(initial);
 
     return (
         <>
@@ -15,24 +26,20 @@ const Counter = ({ stock, initial, onAdd }) => {
                 <CardActions>
                     <Stack className="btnCounter" direction="row" spacing={2}>
 
-                        <Button variant="outlined" size="small" onClick={() => {
-                            counter > initial ? setCounter(counter - 1) : alert('Por lo menos selecciona un producto')
-                        }}> - </Button>
+                        <Button variant="outlined" color="inherit" size="small" onClick={addQuantity}> - </Button>
 
-                        <Button className="countNumber" size="large" color="secondary">
-                            {counter}
+                        <Button className="countNumber" size="large" color="inherit">
+                            {count}
                         </Button>
 
-                        <Button variant="outlined" onClick={() => {
-                            counter < stock ? setCounter(counter + 1) : alert('No hay stock suficiente')
-                        }}> + </Button>
+                        <Button  variant="outlined" color="inherit" onClick={subtractQuantity}> + </Button>
 
                     </Stack>
                 </CardActions>
 
-                <Button className="buyNow" size="large" variant="outlined" href="#outlined-buttons" onClick={() => {
-                    onAdd(counter);
-                    setCounter(initial);
+                <Button className="buyNow" size="large" variant="outlined" color="inherit" onClick={() => {
+                    onAdd(count);
+                    setCount(initial);
                 }}> Comprar ahora </Button>
 
             </Card>
@@ -41,4 +48,4 @@ const Counter = ({ stock, initial, onAdd }) => {
     );
 }
 
-export default Counter
+export default ItemCount

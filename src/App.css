@@ -111,3 +111,8 @@ body{
   size: 4rem;
 }
 
+
+.goToCart{
+  display: flex;
+  justify-content: space-around;
+}

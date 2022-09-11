@@ -38,7 +38,7 @@ const Item = ({product}) => {
                     <Button size="large" color='success' variant='text' style={{marginLeft:20}} >${price}</Button>
                     </Stack>
                     
-                <Button size="medium" variant="outlined" style={{ margin: 20 }} onClick={()  => navigate (`/detail/${id}`)}> Ver Más </Button>
+                <Button size="medium" variant="outlined" color="inherit" style={{ margin: 20 }} onClick={()  => navigate (`/detail/${id}`)}> Ver Más </Button>
             </Card>
             
         </div>

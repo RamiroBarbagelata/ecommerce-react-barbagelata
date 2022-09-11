@@ -1,11 +1,19 @@
-import React from 'react'
-import Counter from './ItemCount';
+import React, { useState } from 'react'
+import ItemCount from './ItemCount';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
 
 const ItemDetail = ({ productDetail }) => {
+    const [count, setCount] = useState(1);
+    const [buy, setBuy] = useState(false);
     const { title, description, price, stock, pictureUrl } = productDetail;
-    const initial = 1;
     let totalShop = 0;
-    const onAdd = (quantity) => totalShop === quantity;
+    const onAdd = (quantity) => {
+        // totalShop === quantity;
+        setBuy(true)
+    }
+    const navigate = useNavigate();
 
     return (
         <div className='ItemDetail'>
@@ -15,7 +23,15 @@ const ItemDetail = ({ productDetail }) => {
                 <p>{description}</p>
                 <h3 className='price'>${price}</h3>
                 <p>Stock: {stock}</p>
-                <Counter stock={stock} initial={initial} onAdd={onAdd} />
+                {!buy 
+                ?  <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
+                : <div className='goToCart'>
+                    <Button className="buyNow" size="large" color="inherit" variant="outlined" onClick={() => navigate('/cart')}> Ir al Carrito </Button>
+                    <Button className="buyNow" size="large" color="inherit" variant="outlined" onClick={() => navigate('/')}> Continuar comprando </Button>
+                </div>
+                
+                }
+
             </div>
 
         </div>
