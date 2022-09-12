@@ -4,9 +4,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import { Category } from '@mui/icons-material';
+
 import { useNavigate } from 'react-router-dom';
 
 

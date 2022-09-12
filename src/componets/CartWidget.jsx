@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Cart ({cant}) {
     const navigate = useNavigate();
     return (
-        <>
+        <> 
             <ShoppingCartOutlinedIcon color="inherit" onClick={() => navigate('/cart')}/>
             ({cant})
         </>
