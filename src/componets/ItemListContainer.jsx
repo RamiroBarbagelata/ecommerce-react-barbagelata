@@ -36,9 +36,9 @@ const ItemListContainer = ({ greeting }) => {
     <>
       <p>{loading ? <ClipLoader color={"#4A4A4A"} loading={loading} size={50} /> : null}</p>
       <ItemList listProducts={listProducts} />
-      <div>
+      {/* <div>
         <h1 style={{ color: "#2B4865" }}>{greeting}</h1>
-      </div>
+      </div> */}
     </>
   )
 }

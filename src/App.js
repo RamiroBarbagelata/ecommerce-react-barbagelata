@@ -7,6 +7,7 @@ import ItemDetailContainer from './componets/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './componets/Cart';
 import { CartProvider } from './context/CartContext'
+import Footer from './componets/Footer';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path='/detail/:id' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
             </Routes>
+            <Footer/>
           </div>
         </BrowserRouter>
       </ThemeProvider>

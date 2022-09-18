@@ -95,7 +95,7 @@ export default function NavBar() {
                     </Box>
                     <NavLink to='/'>
                     <div className='nikeLogoMobile'>
-                        <img src={logoNike} style={{ width: '3rem' }} alt="" />
+                        <img src={logoNike} style={{ width: '3rem', marginRight:'5rem' }} alt="" />
                     </div>
                     </NavLink>
 
