@@ -10,7 +10,7 @@ export default function Cart () {
     return (
         <> 
             <ShoppingCartOutlinedIcon color="inherit" onClick={() => navigate('/cart')}/>
-            <span className="cartNumber">{cart.length ? cartQuantity():'' }</span>
+            <span className="cartNumber">{cart.length ? cartQuantity(): null }</span>
         </>
         
     )

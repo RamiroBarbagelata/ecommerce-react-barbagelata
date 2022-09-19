@@ -10,5 +10,4 @@ export const customFetch = new Promise((res, rej) => {
             rej('no')
         }
     }, 2000)
-
 })

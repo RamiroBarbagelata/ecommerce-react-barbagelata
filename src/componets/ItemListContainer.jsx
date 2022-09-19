@@ -3,6 +3,8 @@ import { customFetch } from './customFetch';
 import ItemList from './ItemList'
 import ClipLoader from "react-spinners/ClipLoader";
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { dataBase } from '../firebase/firebase';
 
 const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
@@ -11,34 +13,50 @@ const ItemListContainer = ({ greeting }) => {
 
   const {categoryId} = useParams();
 
+//firebase  
+useEffect(() => {
+  setLoading(true)
+  const allProducts = categoryId ? query(collection(dataBase, "products"), where("category", "==", categoryId)) : collection(dataBase, "products")
+  getDocs(allProducts)
+  .then((result) => {
+    const list = result.docs.map((product) => {
+      return{
+        id:product.id,
+        ...product.data()
+      }
+    })
+    setlistProducts(list)
+  })
+  .catch((error) => console.log(error))
+  .finally(() => setLoading(false))
+}, [categoryId])
 
 
-  useEffect(() => {
-    customFetch
-      .then((res) => {
-        if(categoryId){
-          setlistProducts(res.filter((item) => item.category === categoryId));
-        }else{
-          setlistProducts(res);
-        }
+//mock
+  // useEffect(() => {
+  //   customFetch
+  //     .then((res) => {
+  //       if(categoryId){
+  //         setlistProducts(res.filter((item) => item.category === categoryId));
+  //       }else{
+  //         setlistProducts(res);
+  //       }
         
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [categoryId]);
+  //     })
+  //     .catch((err) => {
+  //       setError(err);
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }, [categoryId]);
 
 
   return (
     <>
-      <p>{loading ? <ClipLoader color={"#4A4A4A"} loading={loading} size={50} /> : null}</p>
-      <ItemList listProducts={listProducts} />
-      {/* <div>
-        <h1 style={{ color: "#2B4865" }}>{greeting}</h1>
-      </div> */}
+    <div style={{padding:'2rem'}}>
+    {loading ? <ClipLoader color={"#4A4A4A"} loading={loading} size={50} /> : <ItemList listProducts={listProducts} />}
+    </div>
     </>
   )
 }
