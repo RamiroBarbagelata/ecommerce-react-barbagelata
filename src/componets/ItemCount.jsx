@@ -1,6 +1,9 @@
 import Card from '@mui/material/Card';
 import { Button, CardActions } from '@mui/material';
 import Stack from '@mui/material/Stack';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 
 
 const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
@@ -18,7 +21,16 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
         } 
     }
 
+    const theme = createTheme({
+        palette: {
+            neutral: {
+                main: '#000000',
+                contrastText: '#FFFFFF',
+            },
+        },
+    });
 
+   
 
     return (
         <>
@@ -37,10 +49,18 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
                     </Stack>
                 </CardActions>
 
-                <Button className="buyNow" size="large" variant="outlined" color="inherit" onClick={() => {
+                {/* <Button className="buyNow" size="large" variant="outlined" color="inherit" onClick={() => {
                     onAdd(count);
                     setCount(initial);
-                }}> Comprar ahora </Button>
+                }}> Comprar ahora </Button> */}
+
+                <ThemeProvider theme={theme}>
+                <Button className="buyNow" size="large"  color="neutral" variant="contained" style={{ margin: 20 }} onClick={() => {
+                    onAdd(count);
+                    setCount(initial);
+                }}>COMPRAR AHORA</Button>
+                
+                </ThemeProvider>
 
             </Card>
         </>

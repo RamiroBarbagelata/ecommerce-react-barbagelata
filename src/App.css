@@ -4,7 +4,7 @@ body {
 
 .App {
   text-align: center;
-  background-color: #dee1e1;
+  background-color: #ffffff;
 }
 
 .App .menu {
@@ -26,9 +26,7 @@ body {
   margin-left: 3rem;
 }
 
-.ItemListContainer .MuiTypography-h1 {
-  color: blue;
-}
+
 
 .buttons button {
   color: black;
@@ -88,6 +86,14 @@ body {
   color: rgb(24, 179, 0);
 }
 
+.itemDetailPicture{
+  width: 50rem;
+  border-radius: 5%;
+  margin-top: 3rem;
+
+}
+/* style={{ width: '50rem', borderRadius: 10 }} */
+
 .counter {
   display: flex;
   justify-content: left;
@@ -99,8 +105,7 @@ body {
 }
 
 .counter .buyNow {
-  margin-bottom: 1.5rem;
-  color: black;
+  margin-bottom: 1rem;
 }
 
 .counter .btnCounter {
@@ -193,3 +198,48 @@ td {
 
 }
 
+.footer-container{
+  padding: 2rem;
+}
+
+.socialIcons{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.categoryPrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0rem 2rem 0rem 2rem;
+  align-items: center;
+}
+
+.itemPrice{
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.itemCategory{
+  color: rgb(86, 86, 86);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.coverHome{
+  width: 70rem;
+}
+
+.bodyCart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rem 5rem 20rem 5rem;
+}
+
+.notificationCart{
+  margin-right: -1.5rem;
+  margin-top: -1.2rem;
+}

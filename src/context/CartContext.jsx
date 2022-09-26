@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createContext } from "react";
 
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([])
+
+    let cartFromLocal = JSON.parse(window.localStorage.getItem("cart"));
+    if (cartFromLocal === null) {
+        cartFromLocal = [];
+    }
+
+    const [cart, setCart] = useState(cartFromLocal)
 
     const addItem = (item) => {
         const itsInTheCart = cart.find((prod) => prod.id === item.id) 
@@ -44,6 +50,12 @@ export const CartProvider = ({ children }) => {
     const cartTotal = () => {
         return cart.reduce((acc, prod) => acc += prod.price * prod.quantity, 0)
     }
+
+    
+
+    useEffect(() => {
+        window.localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     return (
         <CartContext.Provider value={{ cart, clear, removeItem, isInCart, addItem, cartQuantity, cartTotal }}>

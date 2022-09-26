@@ -5,6 +5,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const CartItem = ({ shopItem }) => {
     const { removeItem } = useContext(CartContext);
+
+
+
     return (
         <div className='containerCart'>
             <table className='itemTable'>
