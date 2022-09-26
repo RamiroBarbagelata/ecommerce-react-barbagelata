@@ -49,11 +49,6 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
                     </Stack>
                 </CardActions>
 
-                {/* <Button className="buyNow" size="large" variant="outlined" color="inherit" onClick={() => {
-                    onAdd(count);
-                    setCount(initial);
-                }}> Comprar ahora </Button> */}
-
                 <ThemeProvider theme={theme}>
                 <Button className="buyNow" size="large"  color="neutral" variant="contained" style={{ margin: 20 }} onClick={() => {
                     onAdd(count);
