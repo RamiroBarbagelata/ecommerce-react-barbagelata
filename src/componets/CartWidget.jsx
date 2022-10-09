@@ -6,7 +6,6 @@ import { CartContext } from "../context/CartContext";
 import { Badge } from "@mui/material";
 
 
-
 export default function Cart () {
     const {cartQuantity, cart} = useContext(CartContext)
     const navigate = useNavigate();

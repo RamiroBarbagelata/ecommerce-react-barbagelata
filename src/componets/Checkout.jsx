@@ -4,9 +4,7 @@ import { dataBase } from '../firebase/firebase';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import { ClipLoader } from 'react-spinners';
 
 const Checkout = () => {
     const[buyer, setBuyer] = useState({});
@@ -15,8 +13,6 @@ const Checkout = () => {
     const [loader, setLoader] = useState(false)
     const navigate = useNavigate()
     const { cart, cartTotal,clear } = useContext(CartContext)
-
-    // const { cart, cartTotal } = useContext(CartContext);
 
     const buyerData = (e) => {
         setBuyer({
@@ -49,20 +45,36 @@ const Checkout = () => {
     }
 
     if (loader) {
-        return <p>Cargandooooooo......</p>
+        return <ClipLoader color={"#4A4A4A"} loading={loader} size={50} /> 
     }
 
     return (
-        <div>
+        <div className='checkOutBox'>
             {!orderId
             ?<div>
-            <h2>Checkout</h2>
-            <h4>Por favor complete todos los campos</h4>
-            <form style={{display: 'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}} onSubmit={finalizePurchase}>
-                <input type="text" placeholder='Nombre y Apellido' name='name' onChange={buyerData}/>
-                <input type="number" placeholder='Teléfono' name='phone' onChange={buyerData}/>
-                <input type="email" placeholder='Email' name='email' onChange={buyerData}/>
-                <button type='submit' >Finalizar Compra</button>
+                <div className='checkOutTitle'>
+                <h2>Checkout</h2>
+                <h4>Por favor complete todos los campos</h4>
+            </div>
+            <form className='formStyle' onSubmit={finalizePurchase}>
+                <div className='inputBox'>
+                    <input type="text"  name='name' onChange={buyerData}/>
+                    <span>Nombre</span>
+                </div>
+                <div className='inputBox'>
+                    <input type="text"  name='name' onChange={buyerData}/>
+                    <span>Apellido</span>
+                </div>
+                <div className='inputBox'>
+                <input type="number"  name='phone' onChange={buyerData}/>
+                <span>Teléfono</span>
+                </div>
+                <div className='inputBox'>
+                <input type="email"  name='email' onChange={buyerData}/>
+                <span>Correo Electrónico</span>
+                </div>
+
+                <button className='finishBuy' type='submit' >Finalizar Compra</button>
                 {message && <p style={{color:'red'}}> Por favor complete todos los campos</p>}
             </form>
             </div>
@@ -70,11 +82,10 @@ const Checkout = () => {
             <div>
                 <h2>Muchas gracias por tu compra</h2>
                 <h4>Tu orden de compra es: {orderId}</h4>
-                <button onClick={() => navigate('/')}>Volver</button>
+                <button className='backToHome' onClick={() => navigate('/')}>Volver</button>
             </div>}
             
         </div>
-
     )
 }
 

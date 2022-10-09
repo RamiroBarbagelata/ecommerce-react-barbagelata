@@ -19,7 +19,6 @@ const Item = ({product}) => {
             },
         },
     });
-
     let pricePoint = new Intl.NumberFormat('de-DE').format(price)
 
     return (
@@ -40,24 +39,14 @@ const Item = ({product}) => {
                         </Typography>
                     </CardContent>
                 </CardActionArea>
-                {/* <Stack direction="center" spacing={2}> */}
-                {/* <Button size="small" color='inherit' variant='text' style={{marginLeft:20}} >{category}</Button>  */}
                 <div className='categoryPrice'>
                 <h5 className='itemCategory'>{category}</h5>
                 <h3 className='itemPrice'>${pricePoint}</h3>
                 </div>
-                
-                {/* <br /> */}
-                    {/* <Button size="large" color='success' variant='text' style={{marginLeft:20}} >${price}</Button> */}
-                    {/* </Stack> */}
-                    
-                {/* <Button size="medium" variant="contained" color="inherit" style={{ margin: 20 }} onClick={()  => navigate (`/detail/${id}`)}> Ver Más </Button> */}
                 <ThemeProvider theme={theme}>
                 <Button color="neutral" variant="contained" style={{ margin: 20 }} onClick={()  => navigate (`/detail/${id}`)}>VER MÁS</Button>
                 </ThemeProvider>
-                
             </Card>
-            
         </div>
         </>
     )

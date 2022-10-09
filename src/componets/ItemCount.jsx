@@ -30,11 +30,11 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
         },
     });
 
-   
 
     return (
         <>
-            <Card className="counter" sx={{ maxWidth: 345 }} style={{ borderRadius: 10 }}>
+        <div className='counterContainer'>
+        <Card className="counter" sx={{ maxWidth: 345 }} style={{ borderRadius: 10 }}>
                 <CardActions>
                     <Stack className="btnCounter" direction="row" spacing={2}>
 
@@ -50,16 +50,15 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
                 </CardActions>
 
                 <ThemeProvider theme={theme}>
-                <Button className="buyNow" size="large"  color="neutral" variant="contained" style={{ margin: 20 }} onClick={() => {
+                <Button className="buyNow" size="large"  color="neutral" variant="contained" onClick={() => {
                     onAdd(count);
                     setCount(initial);
                 }}>COMPRAR AHORA</Button>
-                
                 </ThemeProvider>
-
             </Card>
+        </div>
+            
         </>
-
     );
 }
 

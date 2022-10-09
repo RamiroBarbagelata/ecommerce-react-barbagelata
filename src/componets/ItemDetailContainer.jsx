@@ -1,8 +1,8 @@
 import { collection, doc, getDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
 import { dataBase } from '../firebase/firebase';
-import { customFetch } from './customFetch';
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -25,17 +25,10 @@ const ItemDetailContainer = () => {
         .finally(() => setLoading(false))
     },[])
 
-    // useEffect(() => {
-    //     customFetch
-    //         .then((res) => setProductDetail(res.find((item) => item.id === id)))
-    //         .catch((err) => console.log(err))
-    //         .finally(() => setLoading(false))
-
-    // }, [id])
     console.log('detalle', productDetail)
     return (
         <div>
-            {loading ? <p>Cargando...</p> : <ItemDetail productDetail={productDetail} />}
+            {loading ?  <ClipLoader color={"#4A4A4A"} loading={loading} size={50} />  : <ItemDetail productDetail={productDetail} />}
         </div>
     )
 }

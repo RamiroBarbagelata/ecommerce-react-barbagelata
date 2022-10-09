@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import ItemCount from './ItemCount';
-import { Button } from '@mui/material';
+import { Button, createTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { ThemeProvider } from '@emotion/react';
 
 
 const ItemDetail = ({ productDetail }) => {
@@ -11,13 +12,14 @@ const ItemDetail = ({ productDetail }) => {
     const [buy, setBuy] = useState(false);
     const { title, description, price, stock, pictureUrl, id } = productDetail;
     const { addItem } = useContext(CartContext);
-
-    // const resultados = useContext(CartContext);
-    // const isInCart = resultados.isInCart;
-
-
-
-
+    const theme = createTheme({
+        palette: {
+            neutral: {
+                main: '#000000',
+                contrastText: '#FFFFFF',
+            },
+        },
+    });
 
     const onAdd = () => {
         let purchase = {
@@ -34,8 +36,6 @@ const ItemDetail = ({ productDetail }) => {
     }
     const navigate = useNavigate();
 
-
-
     let pricePoint = new Intl.NumberFormat('de-DE').format(price)
 
 
@@ -47,16 +47,21 @@ const ItemDetail = ({ productDetail }) => {
                 <h1>{title} </h1>
                 <p>{description}</p>
                 <h3 className='price'>${pricePoint}</h3>
-                <p>Stock: {stock}</p>
+                <p>Stock: {stock} disponibles</p>
 
                 {!buy
-                    ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount} />
-                    : <div className='goToCart'>
-                        <Button className="buyNow" size="large" color="inherit" variant="outlined" onClick={() => navigate('/cart')}> Ir al Carrito </Button>
-                        <Button className="buyNow" size="large" color="inherit" variant="outlined" onClick={() => navigate('/')}> Continuar comprando </Button>
-                    </div>
-                }
+                    ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
+                    : 
+                        <ThemeProvider theme={theme}>
+                        <div className='goToCart'>
 
+                        <div className='buttonsItemDetail'>
+                        <Button className="goToCart" size="large" color="neutral" variant="contained" onClick={() => navigate('/cart')}> Ir al Carrito </Button>
+                        <Button className="contShopping" size="large" color="neutral" variant="contained" onClick={() => navigate('/')}> Continuar comprando </Button>
+                        </div>
+                    </div>
+                    </ThemeProvider>
+                }
             </div>
         </div>
     )
