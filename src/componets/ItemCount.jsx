@@ -37,18 +37,13 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
         <Card className="counter" sx={{ maxWidth: 345 }} style={{ borderRadius: 10 }}>
                 <CardActions>
                     <Stack className="btnCounter" direction="row" spacing={2}>
-
                         <Button variant="outlined" color="inherit" size="small" onClick={addQuantity}> - </Button>
-
                         <Button className="countNumber" size="large" color="inherit">
                             {count}
                         </Button>
-
                         <Button  variant="outlined" color="inherit" onClick={subtractQuantity}> + </Button>
-
                     </Stack>
                 </CardActions>
-
                 <ThemeProvider theme={theme}>
                 <Button className="buyNow" size="large"  color="neutral" variant="contained" onClick={() => {
                     onAdd(count);
@@ -56,8 +51,7 @@ const ItemCount = ({ stock, initial, onAdd, count, setCount }) => {
                 }}>COMPRAR AHORA</Button>
                 </ThemeProvider>
             </Card>
-        </div>
-            
+        </div>  
         </>
     );
 }

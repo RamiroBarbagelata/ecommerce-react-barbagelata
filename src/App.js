@@ -11,7 +11,6 @@ import Footer from './componets/Footer';
 import Checkout from './componets/Checkout';
 
 
-
 function App() {
   const greeting = 'Bienvenido a Nike Running Shoes';
   return (

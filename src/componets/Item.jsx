@@ -19,7 +19,7 @@ const Item = ({product}) => {
             },
         },
     });
-    let pricePoint = new Intl.NumberFormat('de-DE').format(price)
+    let pricePoint = new Intl.NumberFormat('de-DE').format(price);
 
     return (
         <>

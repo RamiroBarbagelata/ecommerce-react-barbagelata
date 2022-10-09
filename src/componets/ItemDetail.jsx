@@ -36,7 +36,7 @@ const ItemDetail = ({ productDetail }) => {
     }
     const navigate = useNavigate();
 
-    let pricePoint = new Intl.NumberFormat('de-DE').format(price)
+    let pricePoint = new Intl.NumberFormat('de-DE').format(price);
 
 
 
@@ -48,7 +48,6 @@ const ItemDetail = ({ productDetail }) => {
                 <p>{description}</p>
                 <h3 className='price'>${pricePoint}</h3>
                 <p>Stock: {stock} disponibles</p>
-
                 {!buy
                     ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
                     : 

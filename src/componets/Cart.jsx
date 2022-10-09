@@ -11,7 +11,6 @@ import { ThemeProvider } from '@emotion/react';
 const Cart = () => {
   const { cart, cartTotal, clear } = useContext(CartContext);
   const navigate = useNavigate();
-
   const theme = createTheme({
     palette: {
         neutral: {
@@ -34,7 +33,6 @@ let pricePoint = new Intl.NumberFormat('de-DE').format(cartTotal())
             <Stack className='goBuy' direction="row" spacing={2}>
               <Button size="medium" variant="outlined" color="inherit" onClick={() => navigate('/')}>VAMOS DE COMPRAS</Button>
             </Stack>
-            
           </div>
           :<div>
             <h2 className='cartTitle'>Detalle de tu compra</h2>
