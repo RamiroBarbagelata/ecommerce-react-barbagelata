@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/repository-name/static/css/main.51593327.css",
-    "main.js": "/repository-name/static/js/main.1a336f33.js",
-    "static/js/787.3e95d611.chunk.js": "/repository-name/static/js/787.3e95d611.chunk.js",
-    "static/media/LogoNike.png": "/repository-name/static/media/LogoNike.33e72ac5f05c9061acd3.png",
-    "static/media/logotipo-linkedin.png": "/repository-name/static/media/logotipo-linkedin.032cf8a63be2f0f4d425.png",
-    "index.html": "/repository-name/index.html",
-    "main.51593327.css.map": "/repository-name/static/css/main.51593327.css.map",
-    "main.1a336f33.js.map": "/repository-name/static/js/main.1a336f33.js.map",
-    "787.3e95d611.chunk.js.map": "/repository-name/static/js/787.3e95d611.chunk.js.map"
+    "main.css": "/ecommerce-react-barbagelata/static/css/main.71fa66bf.css",
+    "main.js": "/ecommerce-react-barbagelata/static/js/main.73273759.js",
+    "static/js/787.3e95d611.chunk.js": "/ecommerce-react-barbagelata/static/js/787.3e95d611.chunk.js",
+    "static/media/LogoNike.png": "/ecommerce-react-barbagelata/static/media/LogoNike.33e72ac5f05c9061acd3.png",
+    "static/media/logotipo-linkedin.png": "/ecommerce-react-barbagelata/static/media/logotipo-linkedin.032cf8a63be2f0f4d425.png",
+    "index.html": "/ecommerce-react-barbagelata/index.html",
+    "main.71fa66bf.css.map": "/ecommerce-react-barbagelata/static/css/main.71fa66bf.css.map",
+    "main.73273759.js.map": "/ecommerce-react-barbagelata/static/js/main.73273759.js.map",
+    "787.3e95d611.chunk.js.map": "/ecommerce-react-barbagelata/static/js/787.3e95d611.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51593327.css",
-    "static/js/main.1a336f33.js"
+    "static/css/main.71fa66bf.css",
+    "static/js/main.73273759.js"
   ]
 }
